@@ -1,0 +1,6 @@
+*.log
+*.substvars
+/.debhelper
+/nekohtml-1.9.13
+/files
+/changelog
