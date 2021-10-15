@@ -142,7 +142,7 @@
   </jar>
  </target>
 
- <target name='zip' depends='jar,doc'>
+ <target name='zip' depends='jar'>
   <zip zipfile='${zip.file}'>
     <zipfileset prefix='${fullname}' dir='.' includes='LICENSE*,README*,TODO*' />
     <zipfileset prefix='${fullname}' dir='.' includes='build.xml' />
@@ -326,7 +326,7 @@ public class Version {
 		</artifact:deploy>
 	</target>
 	
-	<target name="mvn-bundle" depends="jar, doc">
+	<target name="mvn-bundle" depends="jar">
 		<property name="mvn.bundle.sources" value="${build.dir}/dist/nekohtml-${version}-sources.jar"/>
 		<property name="mvn.bundle.javadoc" value="${build.dir}/dist/nekohtml-${version}-javadoc.jar"/>
 		<mkdir dir="${build.dir}/dist"/>
